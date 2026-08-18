@@ -161,7 +161,21 @@ class Data:
         Returns:
             dict: Diccionario con métodos enqueue, dequeue, peek y is_empty
         """
-        pass
+        elementos = []
+        def enqueue(elemento):
+            elementos.append(elemento)
+        def dequeue():
+            if len(elementos) == 0:
+                return None
+            else:
+                return elementos.pop(0)
+        def peek():
+            if len(elementos) == 0:
+                return None
+            else:
+                return elementos[0]
+        def vacio():
+            return len(elementos) == 0
     
     def matriz_transpuesta(self, matriz):
         """
