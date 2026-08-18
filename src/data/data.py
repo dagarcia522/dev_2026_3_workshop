@@ -48,7 +48,11 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
-        pass
+        listica = []
+        for elemento in lista:
+            if elemento not in listica:
+                listica.append(elemento)
+        return listica
     
     def merge_ordenado(self, lista1, lista2):
         """
