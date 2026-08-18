@@ -166,7 +166,22 @@ class Conversion:
             texto_a_morse("SOS") -> "... --- ..."
             texto_a_morse("HELLO") -> ".... . .-.. .-.. ---"
         """
-        pass
+        morse_sig = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 
+    'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 
+    'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 
+    'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 
+    'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 
+    'Z': '--..', '0': '-----', '1': '.----', '2': '..---', 
+    '3': '...--', '4': '....-', '5': '.....', '6': '-....', 
+    '7': '--...', '8': '---..', '9': '----.', ' ': '/'}
+        texto = texto.upper()
+        resultado = ""
+        for char in texto:
+            if char in morse_sig:
+                resultado += morse_sig[char] + " "
+            else:
+                resultado += "NA"
+        return resultado
     
     def morse_a_texto(self, morse):
         """
