@@ -187,4 +187,12 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
-        pass
+        filas = len(matriz)
+        columnas = len(matriz[0])
+        resultados = []
+        for j  in range(columnas):
+            fila = []
+            for i in range(filas):
+                fila.append(matriz[i][j])
+            resultados.append(fila)
+        return resultados
